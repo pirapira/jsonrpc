@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UdpFramed` struct in crate `jsonrpc_ws_server`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UdpFramed">
+
+    <title>jsonrpc_ws_server::tokio_core::net::UdpFramed - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct UdpFramed</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../../index.html'>jsonrpc_ws_server</a>::<wbr><a href='../index.html'>tokio_core</a>::<wbr><a href='index.html'>net</a></p><script>window.sidebarCurrent = {name: 'UdpFramed', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>jsonrpc_ws_server</a>::<wbr><a href='../index.html'>tokio_core</a>::<wbr><a href='index.html'>net</a>::<wbr><a class="struct" href=''>UdpFramed</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#58-65' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct UdpFramed&lt;C&gt; { /* fields omitted */ }</pre><div class='docblock'><p>A unified <code>Stream</code> and <code>Sink</code> interface to an underlying <code>UdpSocket</code>, using
+the <code>UdpCodec</code> trait to encode and decode frames.</p>
+
+<p>You can acquire a <code>UdpFramed</code> instance by using the <code>UdpSocket::framed</code>
+adapter.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;C&gt; <a class="struct" href="../../../jsonrpc_ws_server/tokio_core/net/struct.UdpFramed.html" title="struct jsonrpc_ws_server::tokio_core::net::UdpFramed">UdpFramed</a>&lt;C&gt;</code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#139-167' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_ref' class="method"><span id='get_ref.v' class='invisible'><code>fn <a href='#method.get_ref' class='fnname'>get_ref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../../jsonrpc_ws_server/tokio_core/net/struct.UdpSocket.html" title="struct jsonrpc_ws_server::tokio_core::net::UdpSocket">UdpSocket</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#145-147' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a reference to the underlying I/O stream wrapped by <code>Framed</code>.</p>
+
+<p>Note that care should be taken to not tamper with the underlying stream
+of data coming in as it may corrupt the stream of frames otherwise being
+worked with.</p>
+</div><h4 id='method.get_mut' class="method"><span id='get_mut.v' class='invisible'><code>fn <a href='#method.get_mut' class='fnname'>get_mut</a>(&amp;mut self) -&gt; &amp;mut <a class="struct" href="../../../jsonrpc_ws_server/tokio_core/net/struct.UdpSocket.html" title="struct jsonrpc_ws_server::tokio_core::net::UdpSocket">UdpSocket</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#155-157' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a mutable reference to the underlying I/O stream wrapped by
+<code>Framed</code>.</p>
+
+<p>Note that care should be taken to not tamper with the underlying stream
+of data coming in as it may corrupt the stream of frames otherwise being
+worked with.</p>
+</div><h4 id='method.into_inner' class="method"><span id='into_inner.v' class='invisible'><code>fn <a href='#method.into_inner' class='fnname'>into_inner</a>(self) -&gt; <a class="struct" href="../../../jsonrpc_ws_server/tokio_core/net/struct.UdpSocket.html" title="struct jsonrpc_ws_server::tokio_core::net::UdpSocket">UdpSocket</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#164-166' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Consumes the <code>Framed</code>, returning its underlying I/O stream.</p>
+
+<p>Note that care should be taken to not tamper with the underlying stream
+of data coming in as it may corrupt the stream of frames otherwise being
+worked with.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Sink' class='impl'><span class='in-band'><code>impl&lt;C&gt; <a class="trait" href="https://docs.rs/futures/0.1/futures/sink/trait.Sink.html" title="trait futures::sink::Sink">Sink</a> for <a class="struct" href="../../../jsonrpc_ws_server/tokio_core/net/struct.UdpFramed.html" title="struct jsonrpc_ws_server::tokio_core::net::UdpFramed">UdpFramed</a>&lt;C&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;C: <a class="trait" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html" title="trait jsonrpc_ws_server::tokio_core::net::UdpCodec">UdpCodec</a>,&nbsp;</span></code><a href='#impl-Sink' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#80-126' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.SinkItem' class="type"><span id='SinkItem.t' class='invisible'><code>type <a href='https://docs.rs/futures/0.1/futures/sink/trait.Sink.html#associatedtype.SinkItem' class="type">SinkItem</a> = &lt;C as <a class="trait" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html" title="trait jsonrpc_ws_server::tokio_core::net::UdpCodec">UdpCodec</a>&gt;::<a class="type" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html#associatedtype.Out" title="type jsonrpc_ws_server::tokio_core::net::UdpCodec::Out">Out</a></code></span></h4>
+<h4 id='associatedtype.SinkError' class="type"><span id='SinkError.t' class='invisible'><code>type <a href='https://docs.rs/futures/0.1/futures/sink/trait.Sink.html#associatedtype.SinkError' class="type">SinkError</a> = <a class="struct" href="https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html" title="struct std::io::error::Error">Error</a></code></span></h4>
+<h4 id='method.start_send' class="method"><span id='start_send.v' class='invisible'><code>fn <a href='https://docs.rs/futures/0.1/futures/sink/trait.Sink.html#tymethod.start_send' class='fnname'>start_send</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;item: &lt;C as <a class="trait" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html" title="trait jsonrpc_ws_server::tokio_core::net::UdpCodec">UdpCodec</a>&gt;::<a class="type" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html#associatedtype.Out" title="type jsonrpc_ws_server::tokio_core::net::UdpCodec::Out">Out</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="https://docs.rs/futures/0.1/futures/poll/enum.AsyncSink.html" title="enum futures::poll::AsyncSink">AsyncSink</a>&lt;&lt;C as <a class="trait" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html" title="trait jsonrpc_ws_server::tokio_core::net::UdpCodec">UdpCodec</a>&gt;::<a class="type" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html#associatedtype.Out" title="type jsonrpc_ws_server::tokio_core::net::UdpCodec::Out">Out</a>&gt;, <a class="struct" href="https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html" title="struct std::io::error::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#84-99' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.poll_complete' class="method"><span id='poll_complete.v' class='invisible'><code>fn <a href='https://docs.rs/futures/0.1/futures/sink/trait.Sink.html#tymethod.poll_complete' class='fnname'>poll_complete</a>(&amp;mut self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="https://docs.rs/futures/0.1/futures/poll/enum.Async.html" title="enum futures::poll::Async">Async</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;, <a class="struct" href="https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html" title="struct std::io::error::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#101-120' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.close' class="method"><span id='close.v' class='invisible'><code>fn <a href='https://docs.rs/futures/0.1/futures/sink/trait.Sink.html#method.close' class='fnname'>close</a>(&amp;mut self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="https://docs.rs/futures/0.1/futures/poll/enum.Async.html" title="enum futures::poll::Async">Async</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">()</a>&gt;, <a class="struct" href="https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html" title="struct std::io::error::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#122-125' title='goto source code'>[src]</a></span></h4>
+</div><h3 id='impl-Stream' class='impl'><span class='in-band'><code>impl&lt;C&gt; <a class="trait" href="https://docs.rs/futures/0.1/futures/stream/trait.Stream.html" title="trait futures::stream::Stream">Stream</a> for <a class="struct" href="../../../jsonrpc_ws_server/tokio_core/net/struct.UdpFramed.html" title="struct jsonrpc_ws_server::tokio_core::net::UdpFramed">UdpFramed</a>&lt;C&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;C: <a class="trait" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html" title="trait jsonrpc_ws_server::tokio_core::net::UdpCodec">UdpCodec</a>,&nbsp;</span></code><a href='#impl-Stream' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#67-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Item' class="type"><span id='Item.t' class='invisible'><code>type <a href='https://docs.rs/futures/0.1/futures/stream/trait.Stream.html#associatedtype.Item' class="type">Item</a> = &lt;C as <a class="trait" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html" title="trait jsonrpc_ws_server::tokio_core::net::UdpCodec">UdpCodec</a>&gt;::<a class="type" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html#associatedtype.In" title="type jsonrpc_ws_server::tokio_core::net::UdpCodec::In">In</a></code></span></h4>
+<h4 id='associatedtype.Error' class="type"><span id='Error.t' class='invisible'><code>type <a href='https://docs.rs/futures/0.1/futures/stream/trait.Stream.html#associatedtype.Error' class="type">Error</a> = <a class="struct" href="https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html" title="struct std::io::error::Error">Error</a></code></span></h4>
+<h4 id='method.poll' class="method"><span id='poll.v' class='invisible'><code>fn <a href='https://docs.rs/futures/0.1/futures/stream/trait.Stream.html#tymethod.poll' class='fnname'>poll</a>(&amp;mut self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="https://docs.rs/futures/0.1/futures/poll/enum.Async.html" title="enum futures::poll::Async">Async</a>&lt;<a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&lt;C as <a class="trait" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html" title="trait jsonrpc_ws_server::tokio_core::net::UdpCodec">UdpCodec</a>&gt;::<a class="type" href="../../../jsonrpc_ws_server/tokio_core/net/trait.UdpCodec.html#associatedtype.In" title="type jsonrpc_ws_server::tokio_core::net::UdpCodec::In">In</a>&gt;&gt;, <a class="struct" href="https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html" title="struct std::io::error::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='https://docs.rs/tokio-core/0.1/src/tokio_core/net/udp/frame.rs.html#71-77' title='goto source code'>[src]</a></span></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "jsonrpc_ws_server";
+    </script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>
